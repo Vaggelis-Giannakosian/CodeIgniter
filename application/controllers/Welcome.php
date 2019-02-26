@@ -22,10 +22,11 @@ class Welcome extends CI_Controller {
 
 
     public function index()
-	{
+	{   $this->load->view('include/header.php');
 		$this->load->view('index.html');
+        $this->load->view('include/footer.php');
 	}
-	
+
 
 
 }
