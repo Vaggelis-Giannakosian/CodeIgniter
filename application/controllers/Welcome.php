@@ -22,11 +22,21 @@ class Welcome extends CI_Controller {
 
 
     public function index()
-	{   $this->load->view('include/header.php');
-		$this->load->view('index.html');
-        $this->load->view('include/footer.php');
+	{
+	    $data = array(
+	        'name'=>array(
+	            'firstname'=>'vaggelis',
+                'lastname'=>'giannakosian',
+            ),
+            'surname'=>'giannakosian',
+        );
+
+		$this->load->view('index.php',$data);
 	}
 
-
+    public function createTable($name='users'){
+        $this->load->model('Sample_model','foobar');
+        $this->foobar->crudCreate($name);
+    }
 
 }

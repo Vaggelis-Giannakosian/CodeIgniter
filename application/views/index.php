@@ -1,3 +1,7 @@
+<?php $this->load->view('include/header.php'); ?>
+
+
+<h1><a href="<?php echo site_url('welcome/createTable/papaki'); ?> ">Create user table</a></h1>
 
 
     <!--Slider-->
@@ -433,3 +437,4 @@
 </section>
 <!--/bottom-->
 
+<?php $this->load->view('include/footer.php'); ?>
